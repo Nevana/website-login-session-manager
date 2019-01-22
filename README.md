@@ -17,13 +17,13 @@
     
     * `sudo cp -r /your/location/or/the/folder /var/www/html/`
 
-* It is recommended to place the database not in the `/var/www/html/`
+* It is recommended to place the database not in the `/var/www/html/` directory
 
 * Move it to another directory:
     
     * e.g. `/var/www/db/login.db`
 
-* You have to modify in `login.php` the db connection on line 13
+* You have to modify the db connection in file `login.php` (line 13)
 
 * If you use your own database you have to modify also the sql query on line 26
 
@@ -31,9 +31,9 @@
 
     * `sudo service apache2 restart`
 
-* Use your favourite webbrowser and connect to your website and try to log in
+* Use your favourite webbrowser and connect to your website and try to login
 
-* If you add a new html file to you website you have to include the `sessionCheck.php` file:
+* If you add a new php file to you website you have to include the `sessionCheck.php` file:
 
     * `vim /var/www/html/yourFile.php`:
 
