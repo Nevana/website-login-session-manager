@@ -35,7 +35,8 @@
 
 * If you add a new php file to you website you have to include the `sessionCheck.php` file:
 
-    * `vim /var/www/html/yourFile.php`:
-		* `<?php include 'sessionCheck.php'; ?>`
+    * Run command `vim /var/www/html/yourFile.php`
+    
+    * Add `<?php include 'sessionCheck.php'; ?>` to the file
 
 * You login and session manager is ready to use!
