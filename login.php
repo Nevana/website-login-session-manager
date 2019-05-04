@@ -10,7 +10,7 @@
 	//DB connection
 	try {
         //Modify with you db connection!!! Below is an example
-		$conn = new PDO('sqlite:/you/location/of/the/db/login.db');
+		$conn = new PDO('sqlite:db/login.db');
 	//If connection fails session dies
 	} catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
@@ -49,26 +49,28 @@
 		}
 	}
 ?>
-<html>
-    <head>
-	    <link rel="icon" href="files/favicon.ico" type="image" sizes="16x16"/>
-        <!-- Source implemetation -->
-        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
-        <link rel="stylesheet" href="bootstrap/bootstrap-theme.min.css">
-        <script src="bootstrap/bootstrap.min.js"></script>
-        <script src="bootstrap/jquery.min.js"></script>
-        <style>
-        /* Here you can style you login mask */
-        </style>
-    </head>
-    <body>
-        <!--Loginmask -->
-        <h1>LOGIN</h1>
-        <form action="login.php" method="post">
-            name:<input type="text" name="name">
-    	    password:<input type="password" name="pw">
-	        <input type=submit name=submit value="Login">
-			<span class="tooltiptext"><?=$meldung?></span>
-        </form>
-    </body>
+<html lang="en">
+
+<head>
+  <link rel="icon" href="files/favicon.ico" type="image" sizes="16x16"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="src/css/font.css">
+  <link rel="stylesheet" href="src/css/login.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <section class="log-form">
+    <h1>LOGIN</h1>
+    <form action="login.php" method="post">
+      <input type="text" name="name" placeholder="name">
+      <input type="password" name="pw" placeholder="password">
+      <button type=submit class="btn" value="Login">Login</button>
+      <span class="tooltiptext"><?=$meldung?></span>
+    </form>
+  </section>
+</body>
+
 </html>
